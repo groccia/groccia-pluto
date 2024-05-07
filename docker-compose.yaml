@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "${DOCKER_PORT}:${DOCKER_PORT}"
+    command:
+      [
+        "uvicorn",
+        "src.main:app",
+        "--host",
+        "${DOCKER_HOST}",
+        "--port",
+        "${DOCKER_PORT}",
+        "--reload",
+      ]
+    volumes:
+      - ./src:/code/src
+      - ./tests:/code/tests
