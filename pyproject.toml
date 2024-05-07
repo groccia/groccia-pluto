@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "groccia-pluto"
+version = "0.1.0"
+description = "APIs written mainly in Python"
+authors = ["Thang Phan <phancaothng@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.111.0"
+pydantic-settings = "^2.2.1"
+pytest = "^8.2.0"
+
+[tool.poetry.group.dev.dependencies]
+fastapi = "^0.111.0"
+pydantic-settings = "^2.2.1"
+pytest = "^8.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
