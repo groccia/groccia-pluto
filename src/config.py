@@ -7,5 +7,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "Pluto API"
     API_V1_STR: str = "/api/v1"
 
+    ALLOWED_ORIGINS: list[str] = ["http://localhost:8000"]
+
 
 settings = Settings()
