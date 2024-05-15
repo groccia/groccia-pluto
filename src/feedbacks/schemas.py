@@ -1,7 +1,7 @@
 from datetime import datetime
-from uuid import uuid4
+from uuid import UUID
 
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr
 
 
 class FeedbackIn(BaseModel):
@@ -10,5 +10,5 @@ class FeedbackIn(BaseModel):
 
 
 class FeedbackOut(FeedbackIn):
-    id: str = Field(default_factory=lambda: str(uuid4()))
-    created_at: datetime = Field(default_factory=datetime.now)
+    id: UUID
+    created_at: datetime
